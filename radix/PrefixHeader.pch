@@ -1,0 +1,27 @@
+//
+//  PrefixHeader.pch
+//  radix
+//
+//  Created by patrick on 16-8-10.
+//  Copyright (c) 2016年 patrick. All rights reserved.
+//
+
+#ifndef radix_PrefixHeader_pch
+#define radix_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define UIColorFromARGB(arbgValue) [UIColor colorWithRed:((float)((arbgValue & 0xFF0000) >> 16))/255.0 green:((float)((arbgValue & 0xFF00) >> 8))/255.0 blue:((float)(arbgValue & 0xFF))/255.0 alpha:((float)((arbgValue & 0xFF000000) >> 24))/255.0]
+#define BG_GRAY_COLOR UIColorFromARGB(0xFFEBEBEB)
+#define GRAY_TEXT_COLOR UIColorFromARGB(0xFF898989)
+#define BASE_CORLOR UIColorFromARGB(0xFF3285FF)
+#define BASE_CORLOR_PRESSED UIColorFromARGB(0xFF3075DC)
+#define BG_BTN_PRESSED_COLOR UIColorFromARGB(0xFFCCCCCC)
+#define IS_IOS7_LATER ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)
+#define SCREEN_WIDTH [[UIScreen mainScreen] applicationFrame].size.width
+#define SCREEN_HEIGHT [[UIScreen mainScreen] applicationFrame].size.height
+
+#define IS_TEST NO
+#define IS_HTTPS NO
+
+#endif
